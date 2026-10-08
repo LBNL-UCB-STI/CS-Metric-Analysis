@@ -1,9 +1,9 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\log_cs_paper_analysis.smcl
+       {txt}log:  {res}C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\log_cs_paper_analysis.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}13 Jul 2026, 08:39:57
+ {txt}opened on:  {res} 8 Oct 2026, 14:18:19
 {txt}
 {com}. use "$proc\cs_paper_data_for_regressions"
 {txt}
@@ -657,7 +657,7 @@ no observations
 
 {txt}
 {com}. 
-. ** generate figures
+. ** FIGURE 7
 . 
 . /*Generate and save each plot individually*/
 . cdfplot cs_baseline if cs_baseline_nooutliers==1, by(networktype) opt1(lc(orange*1.4 orange*1.2 orange orange*.6 orange*.3 emerald*1.2 emerald*.6 emerald*.4) ytitle("Cumulative % Distribution") xtitle("CS Metric" "(b)") legend(lab(1 "Urban 1") lab(2 "Urban 2") lab(3 "Urban 3") lab(4 "Urban 4") lab(5 "Urban 5") lab(6 "Rural 1") lab(7 "Rural 2") lab(8 "Rural 3") position(10) ring(0))) name(network_plot, replace)
@@ -685,7 +685,7 @@ no observations
 . graph export "$fig\combined_cs.png", replace
 {txt}{p 0 4 2}
 file {bf}
-C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\figures\combined_cs.png{rm}
+C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\figures\combined_cs.png{rm}
 saved as
 PNG
 format
@@ -696,7 +696,7 @@ format
 . global socioec="c.frac_age_above_65 c.edu_above_bs c.frac_hh_no_veh c.frac_tenure_renter  c.frac_below_poverty c.frac_hh_inc_below_40k c.frac_hh_inc_above_100k c.job_density c.pop_density"
 {txt}
 {com}. 
-. /*Tabl 1: Geotype Regressions*/
+. ** TABLE 3: Typology regressions
 . 
 . outreg2 using "$tab\cs_overall", excel replace: reg cs_baseline i.geotype_enc
 
@@ -717,8 +717,8 @@ format
 {txt}{space 12} {c |}
 {space 7}_cons {c |}{col 14}{res}{space 2} 79.68996{col 26}{space 2} .0521445{col 37}{space 1} 1528.25{col 46}{space 3}0.000{col 54}{space 4} 79.58776{col 67}{space 3} 79.79216
 {txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
 {com}. outreg2 using "$tab\cs_overall", excel append: reg cs_baseline i.microtype_enc
 
@@ -740,8 +740,8 @@ format
 {txt}{space 21} {c |}
 {space 16}_cons {c |}{col 23}{res}{space 2} 85.21612{col 35}{space 2} .0792676{col 46}{space 1} 1075.04{col 55}{space 3}0.000{col 63}{space 4} 85.06076{col 76}{space 3} 85.37149
 {txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
 {com}. outreg2 using "$tab\cs_overall", excel append: reg cs_baseline i.network_enc
 
@@ -766,10 +766,13 @@ format
 {txt}{space 12} {c |}
 {space 7}_cons {c |}{col 14}{res}{space 2}  87.4138{col 26}{space 2} .1059635{col 37}{space 1}  824.94{col 46}{space 3}0.000{col 54}{space 4} 87.20612{col 67}{space 3} 87.62149
 {txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
-{com}. 
+{com}. *See results in cs_overall.xml file or log_cs_paper_analysis.smcl file
+. 
+. ** TABLE 4: Within Geotype regressions
+. 
 . outreg2 using "$tab\cs_overall", ct(Geo A) excel append: reg cs_baseline i.microtype_enc i.network_enc if geo_A==1
 
 {txt}      Source {c |}       SS           df       MS      Number of obs   ={res}    46,578
@@ -796,8 +799,8 @@ format
 {txt}{space 21} {c |}
 {space 16}_cons {c |}{col 23}{res}{space 2} 91.52509{col 35}{space 2} .0872512{col 46}{space 1} 1048.98{col 55}{space 3}0.000{col 63}{space 4} 91.35408{col 76}{space 3} 91.69611
 {txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
 {com}. outreg2 using "$tab\cs_overall", ct(Geo B)  excel append: reg cs_baseline i.microtype_enc i.network_enc if geo_B==1
 
@@ -825,8 +828,8 @@ format
 {txt}{space 21} {c |}
 {space 16}_cons {c |}{col 23}{res}{space 2} 72.74539{col 35}{space 2} .2655571{col 46}{space 1}  273.94{col 55}{space 3}0.000{col 63}{space 4} 72.22488{col 76}{space 3}  73.2659
 {txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
 {com}. outreg2 using "$tab\cs_overall", ct(Geo C)  excel append: reg cs_baseline i.microtype_enc i.network_enc if geo_C==1
 
@@ -852,8 +855,8 @@ format
 {txt}{space 21} {c |}
 {space 16}_cons {c |}{col 23}{res}{space 2} 67.04646{col 35}{space 2} 2.632723{col 46}{space 1}   25.47{col 55}{space 3}0.000{col 63}{space 4} 61.88486{col 76}{space 3} 72.20806
 {txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
 {com}. outreg2 using "$tab\cs_overall", ct(Geo D)  excel append: reg cs_baseline i.microtype_enc i.network_enc if geo_D==1
 
@@ -879,11 +882,12 @@ format
 {txt}{space 21} {c |}
 {space 16}_cons {c |}{col 23}{res}{space 2} 64.53642{col 35}{space 2} 12.04216{col 46}{space 1}    5.36{col 55}{space 3}0.000{col 63}{space 4} 40.90032{col 76}{space 3} 88.17251
 {txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
-{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\cs_overall.txt""':seeout}
+{res}{txt}{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\cs_overall.txt""':seeout}
 
-{com}. 
-. /*Tabl 2: ANOVA Analysis*/
+{com}. *See results in cs_overall.xml file or log_cs_paper_analysis.smcl file
+. 
+. /*ANOVA Analysis*/
 . 
 . *robustness check
 . anova cs_baseline c.job_density c.pop_density
@@ -919,6 +923,7 @@ Note: Eta-squared values for individual model terms are partial.
 {p_end}
 {res}{txt}
 {com}. 
+. **TABLE 5 and TABLE S6: Main ANOVA Analysis
 . *main ANOVA
 . anova cs_baseline i.microtype_enc i.network_enc if geo_A==1
 
@@ -1048,7 +1053,10 @@ Note: Eta-squared values for individual model terms are partial.
 Note: Eta-squared values for individual model terms are partial.
 {p_end}
 {res}{txt}
-{com}. 
+{com}. *see results in log_cs_paper_analysis.smcl
+. 
+. /*Regression Analysis*/
+. 
 . /*Define panel data structure with units being counties, and tracts within counties as within-unit observations*/
 . xtset county_enc o_geoid
 {res}
@@ -1057,7 +1065,7 @@ Note: Eta-squared values for individual model terms are partial.
 {txt}{col 10}Delta: {res}1 unit
 {txt}
 {com}. 
-. *Table 3 Regressions: Regression results for median household income
+. ** TABLE 6 and TABLE S7: Regression results for median household income
 . outreg2 using "$tab\hhmedianincome", excel replace: xtreg hhmedianincome ///
 > cs_baseline, fe vce(cl county_enc)
 {res}
@@ -1084,8 +1092,8 @@ Note: Eta-squared values for individual model terms are partial.
      {txt}sigma_e {c |} {res} 24393.196
          {txt}rho {c |} {res} .68711888{txt}   (fraction of variance due to u_i)
 {hline 13}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.txt""':seeout}
 
 {com}. outreg2 using "$tab\hhmedianincome", excel append: xtreg hhmedianincome ///
 > cs_baseline $socioec unemployment_rate, fe vce(cl county_enc)
@@ -1123,8 +1131,8 @@ Note: Eta-squared values for individual model terms are partial.
                {txt}sigma_e {c |} {res} 8535.1238
                    {txt}rho {c |} {res} .12029723{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.txt""':seeout}
 
 {com}. outreg2 using "$tab\hhmedianincome", excel append: xtreg hhmedianincome ///
 > cs_baseline ///
@@ -1181,8 +1189,8 @@ Note: Eta-squared values for individual model terms are partial.
                {txt}sigma_e {c |} {res} 8529.4232
                    {txt}rho {c |} {res} .13369848{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.txt""':seeout}
 
 {com}. 
 . outreg2 using "$tab\hhmedianincome", excel append: xtreg hhmedianincome ///
@@ -1247,8 +1255,8 @@ Note: Eta-squared values for individual model terms are partial.
                {txt}sigma_e {c |} {res}  8527.643
                    {txt}rho {c |} {res} .14428187{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.txt""':seeout}
 
 {com}. 
 . outreg2 using "$tab\hhmedianincome", excel append: xtreg hhmedianincome ///
@@ -1328,8 +1336,8 @@ urban#c.micro_5#c.cs_baseline {c |}
                       {txt}sigma_e {c |} {res}  8521.963
                           {txt}rho {c |} {res} .12790268{txt}   (fraction of variance due to u_i)
 {hline 30}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.txt""':seeout}
 
 {com}. 
 . outreg2 using "$tab\hhmedianincome", excel append: xtreg hhmedianincome ///
@@ -1406,11 +1414,12 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2} 76.32223{col 40}{space 2}
                    {txt}sigma_e {c |} {res}  8521.002
                        {txt}rho {c |} {res}  .1450594{txt}   (fraction of variance due to u_i)
 {hline 27}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\hhmedianincome.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\hhmedianincome.txt""':seeout}
 
-{com}. 
+{com}. *See results in hhmedianincome.xml file or log_cs_paper_analysis.smcl file
 . 
+. *rescaling variables for unemployment rate regressions
 . replace hhmedianincome=hhmedianincome/1000
 {txt}variable {bf}{res}hhmedianincome{sf}{txt} was {bf}{res}long{sf}{txt} now {bf}{res}double{sf}
 {txt}(72,061 real changes made)
@@ -1422,7 +1431,7 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2} 76.32223{col 40}{space 2}
 {txt}(72,575 real changes made)
 
 {com}. 
-. *Table 4 Regressions: Regression results for unemployment rate
+. **TABLE S8: Regression results for unemployment rate
 . outreg2 using "$tab\unemployment_rate", excel replace: xtreg unemployment_rate ///
 > cs_baseline, fe vce(cl county_enc)
 {res}
@@ -1449,8 +1458,8 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2} 76.32223{col 40}{space 2}
      {txt}sigma_e {c |} {res} 2.4887471
          {txt}rho {c |} {res} .51397329{txt}   (fraction of variance due to u_i)
 {hline 13}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.txt""':seeout}
 
 {com}. outreg2 using "$tab\unemployment_rate", excel append: xtreg unemployment_rate ///
 > cs_baseline $socioec hhmedianincome, fe vce(cl county_enc)
@@ -1488,8 +1497,8 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2} 76.32223{col 40}{space 2}
                {txt}sigma_e {c |} {res}  2.070845
                    {txt}rho {c |} {res} .32108897{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.txt""':seeout}
 
 {com}. outreg2 using "$tab\unemployment_rate", excel append: xtreg unemployment_rate ///
 > cs_baseline ///
@@ -1546,8 +1555,8 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2} 76.32223{col 40}{space 2}
                {txt}sigma_e {c |} {res} 2.0689853
                    {txt}rho {c |} {res} .33344427{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.txt""':seeout}
 
 {com}. 
 . outreg2 using "$tab\unemployment_rate", excel append: xtreg unemployment_rate ///
@@ -1612,8 +1621,8 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2} 76.32223{col 40}{space 2}
                {txt}sigma_e {c |} {res} 2.0689732
                    {txt}rho {c |} {res} .33520087{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.txt""':seeout}
 
 {com}. 
 . outreg2 using "$tab\unemployment_rate", excel append: xtreg unemployment_rate ///
@@ -1693,8 +1702,8 @@ urban#c.micro_5#c.cs_baseline {c |}
                       {txt}sigma_e {c |} {res} 2.0687675
                           {txt}rho {c |} {res} .33648559{txt}   (fraction of variance due to u_i)
 {hline 30}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.txt""':seeout}
 
 {com}. 
 . outreg2 using "$tab\unemployment_rate", excel append: xtreg unemployment_rate ///
@@ -1771,12 +1780,23 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2}-.0057541{col 40}{space 2}
                    {txt}sigma_e {c |} {res} 2.0689861
                        {txt}rho {c |} {res} .33622591{txt}   (fraction of variance due to u_i)
 {hline 27}{c BT}{hline 64}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.xml"'}
-{browse `"C:\Users\caspurlock\Documents\GitHub\CQM-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\unemployment_rate.txt""':seeout}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.xml"'}
+{browse `"C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"' :dir}{com} : {txt}{stata `"seeout using "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\unemployment_rate.txt""':seeout}
+
+{com}. *See results in unemployment_rate.xml file or log_cs_paper_analysis.smcl file
+. 
+. 
+. ***Validation comparison with cummulative accessibility***
+. replace cummulative_acc45_auto=0 if cummulative_acc45_auto==.
+{txt}(56 real changes made)
+
+{com}. replace cummulative_acc45_bus=0 if cummulative_acc45_bus==.
+{txt}(33,954 real changes made)
+
+{com}. replace cummulative_acc45_bike=0 if cummulative_acc45_bike==.
+{txt}(14,679 real changes made)
 
 {com}. 
-. ***Validation comparison with cummulative accessibility***
-. 
 . replace cummulative_acc45_auto=cummulative_acc45_auto/10000
 {txt}variable {bf}{res}cummulative_acc45_auto{sf}{txt} was {bf}{res}long{sf}{txt} now {bf}{res}double{sf}
 {txt}(72,987 real changes made)
@@ -1790,30 +1810,187 @@ c.network_R3#c.cs_baseline {c |}{col 28}{res}{space 2}-.0057541{col 40}{space 2}
 {txt}(58,321 real changes made)
 
 {com}. 
+. **TABLE S10
 . corr cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike
-{txt}(obs=38,347)
+{txt}(obs=73,056)
 
              {c |} cs_bas~e cummul~o cummul~s cummul~e
 {hline 13}{c +}{hline 36}
  cs_baseline {c |}{res}   1.0000
-{txt}cummulativ~o {c |}{res}   0.6891   1.0000
-{txt}cummulativ~s {c |}{res}   0.3717   0.4494   1.0000
-{txt}cummulativ~e {c |}{res}   0.3771   0.4824   0.9602   1.0000
+{txt}cummulativ~o {c |}{res}   0.6691   1.0000
+{txt}cummulativ~s {c |}{res}   0.3920   0.5011   1.0000
+{txt}cummulativ~e {c |}{res}   0.4183   0.5498   0.9389   1.0000
 
 {txt}
 {com}. 
+. tabstat cs_baseline  cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, statistics(cv) column(variables) by(geotype)
+
+{txt}Summary statistics: CV
+Group variable: geotype 
+
+{ralign 7:geotype} {...}
+{c |}{...}
+  cs_bas~e  cummul~o  cummul~s  cummul~e
+{hline 8}{c +}{hline 40}
+{ralign 7:A} {...}
+{c |}{...}
+ {res} .1369676  .9161617  1.983678  1.664205
+{txt}{ralign 7:B} {...}
+{c |}{...}
+ {res} .1666596  1.491992  2.344732  1.690063
+{txt}{ralign 7:C} {...}
+{c |}{...}
+ {res} .2173052  1.191044  7.230827  2.990942
+{txt}{ralign 7:D} {...}
+{c |}{...}
+ {res} .3425437  1.201212  13.73885  3.378687
+{txt}{hline 8}{c +}{hline 40}
+{ralign 7:Total} {...}
+{c |}{...}
+ {res} .1780161  1.207762  2.347011  1.963677
+{txt}{hline 8}{c BT}{hline 40}
+
+{com}. *see results in log_cs_paper_analysis.smcl
+. 
+. **TABLE S11
+. spearman cs_baseline  cummulative_acc45_auto
+
+{txt}Number of observations = {res}73,056
+{txt}        Spearman's rho = {res}0.7425
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_auto} are independent{p_end}
+                  Prob = {res}0.0000
+{txt}
+{com}. 
+. bysort geotype: spearman cs_baseline  cummulative_acc45_auto
+
+{txt}{hline}
+-> geotype = A
+
+Number of observations = {res}46,578
+{txt}        Spearman's rho = {res}0.6321
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_auto} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = B
+
+Number of observations = {res}21,619
+{txt}        Spearman's rho = {res}0.6567
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_auto} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = C
+
+Number of observations =  {res}4,008
+{txt}        Spearman's rho = {res}0.6765
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_auto} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = D
+
+Number of observations =    {res}851
+{txt}        Spearman's rho = {res}0.7817
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_auto} are independent{p_end}
+                  Prob = {res}0.0000
+{txt}
+{com}. bysort geotype: spearman cs_baseline  cummulative_acc45_bus
+
+{txt}{hline}
+-> geotype = A
+
+Number of observations = {res}46,578
+{txt}        Spearman's rho = {res}0.4768
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bus} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = B
+
+Number of observations = {res}21,619
+{txt}        Spearman's rho = {res}0.3035
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bus} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = C
+
+Number of observations =  {res}4,008
+{txt}        Spearman's rho = {res}0.0797
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bus} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = D
+
+Number of observations =    {res}851
+{txt}        Spearman's rho = {res}0.0310
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bus} are independent{p_end}
+                  Prob = {res}0.3778
+{txt}
+{com}. bysort geotype: spearman cs_baseline  cummulative_acc45_bike
+
+{txt}{hline}
+-> geotype = A
+
+Number of observations = {res}46,578
+{txt}        Spearman's rho = {res}0.5362
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bike} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = B
+
+Number of observations = {res}21,619
+{txt}        Spearman's rho = {res}0.3199
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bike} are independent{p_end}
+                  Prob = {res}0.0000
+
+{txt}{hline}
+-> geotype = C
+
+Number of observations =   {res}4,008
+{txt}        Spearman's rho = {res}-0.0004
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bike} are independent{p_end}
+                  Prob = {res} 0.9820
+
+{txt}{hline}
+-> geotype = D
+
+Number of observations =    {res}851
+{txt}        Spearman's rho = {res}0.0555
+
+{txt}{p 0 5 2}Test of H0: {res:cs_baseline} and {res:cummulative_acc45_bike} are independent{p_end}
+                  Prob = {res}0.1055
+{txt}
+{com}. *see results in log_cs_paper_analysis.smcl
+. 
+. **FIGURE S3
 . preserve
 {txt}
 {com}. 
 . collapse (mean) cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, by(geotype)
 {res}{txt}
 {com}. 
-. graph bar cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, over(geotype) legend(lab(1 "CS metric") lab(2 "Cumulative Accessibility (10,000)") lab(3 "Cumulative Bus Accessibility (1,000)") lab(4 "Cumulative Bike Accessibility (1,000)"))
+. graph bar cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, over(geotype) legend(lab(1 "CS metric") lab(2 "Cumulative Auto Accessibility (10,000)") lab(3 "Cumulative Bus Accessibility (1,000)") lab(4 "Cumulative Bike Accessibility (1,000)"))
 {res}{txt}
 {com}. graph export "$fig\cumulative_geo.png", replace
 {txt}{p 0 4 2}
 file {bf}
-C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\figures\cumulative_geo.png{rm}
+C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\figures\cumulative_geo.png{rm}
 saved as
 PNG
 format
@@ -1829,12 +2006,12 @@ format
 . collapse (mean) cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, by(microtype)
 {res}{txt}
 {com}. 
-. graph bar cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, over(microtype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cumulative Accessibility (10,000)") lab(3 "Cumulative Bus Accessibility (1,000)") lab(4 "Cumulative Bike Accessibility (1,000)"))
+. graph bar cs_baseline cummulative_acc45_auto cummulative_acc45_bus cummulative_acc45_bike, over(microtype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cumulative Auto Accessibility (10,000)") lab(3 "Cumulative Bus Accessibility (1,000)") lab(4 "Cumulative Bike Accessibility (1,000)"))
 {res}{txt}
 {com}. graph export "$fig\cumulative_micro.png", replace
 {txt}{p 0 4 2}
 file {bf}
-C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\figures\cumulative_micro.png{rm}
+C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\figures\cumulative_micro.png{rm}
 saved as
 PNG
 format
@@ -1855,7 +2032,7 @@ format
 {com}. graph export "$fig\cumulative_network.png", replace
 {txt}{p 0 4 2}
 file {bf}
-C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\figures\cumulative_network.png{rm}
+C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\figures\cumulative_network.png{rm}
 saved as
 PNG
 format
@@ -1864,76 +2041,12 @@ format
 {com}. 
 . restore
 {txt}
-{com}. /*
-> graph bar cs_baseline cummulative_acc45_auto, over(geotype) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (10,000)"))
-> save $fig\cummulative_auto_geo.png, replace
-> graph bar cs_baseline cummulative_acc45_auto, over(microtype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (10,000)")) 
-> save $fig\cummulative_auto_micro.png, replace
-> graph bar cs_baseline cummulative_acc45_auto, over(networktype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (10,000)")) 
-> save $fig\cummulative_auto_network.png, replace
-> 
-> graph bar cs_baseline cummulative_acc45_bus, over(geotype) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (1,000)"))
-> save $fig\cummulative_bus_geo.png, replace
-> 
-> graph bar cs_baseline cummulative_acc45_bus, over(microtype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (1,000)")) 
-> save $fig\cummulative_bus_micro.png, replace
-> 
-> graph bar cs_baseline cummulative_acc45_bus, over(networktype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (1,000)")) 
-> save $fig\cummulative_bus_network.png, replace
-> 
-> graph bar cs_baseline cummulative_acc45_bike, over(geotype) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (1,000)"))
-> save $fig\cummulative_bike_geo.png, replace
-> 
-> graph bar cs_baseline cummulative_acc45_bike, over(microtype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (1,000)")) 
-> save $fig\cummulative_bike_micro.png, replace
-> 
-> graph bar cs_baseline cummulative_acc45_bike, over(networktype, lab(angle(45))) legend(lab(1 "CS metric") lab(2 "Cummulative Accessibility (1,000)")) 
-> save $fig\cummulative_bike_network.png, replace
-> 
-> 
-> replace cummulative_acc45_auto=cummulative_acc45_auto/100
-> 
-> outreg2 using "$tab\hhmedianincome_cummulativeacc", excel replace: xtreg hhmedianincome ///
-> cummulative_acc45_auto, fe vce(cl county_enc)
-> outreg2 using "$tab\hhmedianincome_cummulativeacc", excel append: xtreg hhmedianincome ///
-> cummulative_acc45_auto $socioec unemployment_rate, fe vce(cl county_enc)
-> outreg2 using "$tab\hhmedianincome_cummulativeacc", excel append: xtreg hhmedianincome ///
-> cummulative_acc45_auto ///
-> geo_B geo_C geo_D ///
-> network_U2 network_U3 network_U4 network_U5 network_R1 network_R2 ///
-> micro_2 micro_3 micro_4 micro_5 busavailability busavailability2 ///
-> $socioec unemployment_rate, fe vce(cl county_enc)
-> 
-> outreg2 using "$tab\hhmedianincome_cummulativeacc", excel append: xtreg hhmedianincome ///
-> geo_B geo_C geo_D c.geo_A#c.cummulative_acc45_auto c.geo_B#c.cummulative_acc45_auto c.geo_C#c.cummulative_acc45_auto c.geo_D#c.cummulative_acc45_auto ///
-> network_U2 network_U3 network_U4 network_U5 network_R1 network_R2 ///
-> micro_2 micro_3 micro_4 micro_5 busavailability busavailability2 ///
-> $socioec  unemployment_rate, fe vce(cl county_enc)
-> 
-> outreg2 using "$tab\hhmedianincome_cummulativeacc", excel append: xtreg hhmedianincome ///
-> c.micro_1#urban#c.cummulative_acc45_auto c.micro_2#urban#c.cummulative_acc45_auto c.micro_3#urban#c.cummulative_acc45_auto c.micro_4#urban#c.cummulative_acc45_auto c.micro_5#urban#c.cummulative_acc45_auto ///
-> geo_B geo_C geo_D ///
-> network_U2 network_U3 network_U4 network_U5 network_R1 network_R2 network_R3 ///
-> micro_2 micro_3 micro_4 micro_5 ///
-> busavailability busavailability2 ///
-> $socioec unemployment_rate, fe vce(cl county_enc)
-> 
-> outreg2 using "$tab\hhmedianincome_cummulativeacc", excel append: xtreg hhmedianincome ///
-> c.network_U1#c.cummulative_acc45_auto c.network_U2#c.cummulative_acc45_auto c.network_U3#c.cummulative_acc45_auto c.network_U4#c.cummulative_acc45_auto c.network_U5#c.cummulative_acc45_auto ///
-> c.network_R1#c.cummulative_acc45_auto c.network_R2#c.cummulative_acc45_auto c.network_R3#c.cummulative_acc45_auto ///
-> geo_B geo_C geo_D ///
-> network_U2 network_U3 network_U4 network_U5 network_R1 network_R2 network_R3 ///
-> micro_2 micro_3 micro_4 micro_5 ///
-> busavailability busavailability2 ///
-> $socioec unemployment_rate, fe vce(cl county_enc)
-> */
-. 
-. 
+{com}. 
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}C:\Users\caspurlock\Documents\GitHub\CQM-Analysis\tables\log_cs_paper_analysis.smcl
+       {txt}log:  {res}C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis\tables\log_cs_paper_analysis.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}13 Jul 2026, 08:40:27
+ {txt}closed on:  {res} 8 Oct 2026, 14:18:48
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
