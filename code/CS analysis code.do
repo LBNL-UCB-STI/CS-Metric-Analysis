@@ -15,8 +15,8 @@ cs_analysis_data.dta
 IMPORTANT: CODE WILL ONLY RUN ONCE A FILE DIRECTORY PATH IS ADDED IN THE FOLLOWING TWO COMMAND LINES WHERE IT SAYS "<input path to local directory here>" 
 */
 
-cd "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"
-global dir "C:\Users\caspurlock\Documents\GitHub\CS-Metric-Analysis"
+cd "<input path to local directory here>"
+global dir "<input path to local directory here>"
 
 global fig $dir\figures
 global tab $dir\tables
