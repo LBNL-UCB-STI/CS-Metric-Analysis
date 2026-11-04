@@ -1,8 +1,8 @@
 **Project Title:</b>National utility-based framework for evaluating U.S. work trip accessibility**
 
-**Authors:** [redacted during double blind review process… will be added upon publication]
+**Authors:** C. Anna Spurlock, Jessica Lazarus, Xiaodan Xu, Zachary A. Needell, Ling Jin, Mahyar Amirgholy, Joseph Y.J. Chow, Mona Asudegi
 
-**Contact:** [redacted during double blind review process… will be added upon publication]
+**Contact:** Mona Asudegi (mona.asudegi@dot.gov ); C. Anna Spurlock (caspurlock@lbl.gov)
 ************************************************
 **Description:**
 This repository contains the data and code necessary to reproduce the primary analysis and figures for the manuscript “National utility-based framework for evaluating U.S. work trip accessibility”. The analysis demonstrates a newly defined work travel accessibility metric characterizing the quality, as a monetized consumer surplus (CS), of travel for the purpose of work for every census tract in the continental United States. The analysis additionally demonstrates the correlation of that CS metric with median household income.
@@ -45,7 +45,7 @@ A data_dictionary.xls inside the raw/ folder is made available. It includes a de
 ************************************************
 **How to Cite:**
 If you use the data or code from this repository in your research, please cite the following manuscript:
-[FULL CITATION TO BE ADDED UPON PUBLICATION]
+Spurlock, C. Anna, Jessica Lazarus, Xiaodan Xu, Zachary A. Needell, Ling Jin, Mahyar Amirgholy, Joseph Y.J. Chow, Mona Asudegi (2027). "National utility-based framework for evaluating U.S. work trip accessibility". _Travel Behaviour and Society_, 4, 101425. https://doi.org/10.1016/j.tbs.2026.101425. 
 ************************************************
 **Other Essential Information and Files:**
   
