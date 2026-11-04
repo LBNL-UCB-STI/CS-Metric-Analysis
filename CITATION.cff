@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the following article."
-title: "GEMS-model"
+title: "CS-Metric-Analysis"
+repository-code: "https://github.com/LBNL-UCB-STI/CS-Metric-Analysis"
 authors:
   - family-names: "Spurlock"
     given-names: "C. Anna"
@@ -25,6 +26,9 @@ preferred-citation:
     - family-names: "Asudegi"
       given-names: "Mona"
   journal: "Travel Behaviour and Society"
-  volume: 4
+  volume: 47
+  start: 101425
   year: 2027
+  issn: "2214-367X"
   doi: "10.1016/j.tbs.2026.101425"
+  url: "https://www.sciencedirect.com/science/article/pii/S2214367X26001948"
