@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the following article."
+title: "GEMS-model"
+authors:
+  - family-names: "Spurlock"
+    given-names: "C. Anna"
+preferred-citation:
+  type: article
+  title: "National utility-based framework for evaluating U.S. work trip accessibility"
+  authors:
+    - family-names: "Spurlock"
+      given-names: "C. Anna"
+    - family-names: "Lazarus"
+      given-names: "Jessica"
+    - family-names: "Xu"
+      given-names: "Xiaodan"
+    - family-names: "Needell"
+      given-names: "Zachary A."
+    - family-names: "Jin"
+      given-names: "Ling"
+    - family-names: "Amirgholy"
+      given-names: "Mahyar"
+    - family-names: "Chow"
+      given-names: "Joseph Y.J."
+    - family-names: "Asudegi"
+      given-names: "Mona"
+  journal: "Travel Behaviour and Society"
+  volume: 4
+  year: 2027
+  doi: "10.1016/j.tbs.2026.101425"
