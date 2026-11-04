@@ -71,5 +71,5 @@ works, and perform publicly and display publicly, and to permit others to do so.
 
 *Citation*
 
-- CITATION.cff: [TO BE ADDED ONCE CITATION IS AVAILABLE - FOR NOW PLEASE DO NOT CITE]
+- [CITATION.cff](CITATION.cff)
 
